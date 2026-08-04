@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Słodkości z Sercem Pieczone – Torty na Zamówienie · Wierzbica, Kozłów, Miechów</title>
+  <meta name="description" content="Słodkości z Sercem Pieczone — torty i słodkości na zamówienie, indywidualnie dopasowane do Twojej okazji. Wierzbica, Kozłów, Miechów. Tel: 516 597 983" />
+  <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/fyy8bT4m/468432815-122120117900569858-2171617149704646160-n.jpg" />
+  
+  <!-- Google Fonts: Playfair Display, Poppins, Great Vibes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-blush-white: #FBF4FB;
+      --color-surface: #FFFFFF;
+      --color-magenta-pink: #FF067C;
+      --color-pink-dark: #D2005F;
+      --color-pink-pale: #FDE4F0;
+      --color-deep-plum: #3A1428;
+      --color-text-dark: #3A1428;
+      --color-text-mid: #5C3448;
+      --color-muted: #9A7A8C;
+      --color-border: #F5DCEC;
+
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'Poppins', sans-serif;
+      --font-script: 'Great Vibes', cursive;
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--color-blush-white);
+      color: var(--color-text-dark);
+      font-family: var(--font-body);
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    /* Layout Container */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Section Commons */
+    .section {
+      padding: 92px 0;
+      position: relative;
+    }
+
+    .section-bg-white {
+      background-color: var(--color-surface);
+    }
+
+    .section-bg-pale {
+      background-color: var(--color-pink-pale);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 48px auto;
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-magenta-pink);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      color: var(--color-deep-plum);
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+    }
+
+    /* Ornamental Divider */
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 16px 0 24px 0;
+    }
+
+    .orn-line {
+      height: 2px;
+      width: 48px;
+      background: rgba(255, 6, 124, 0.35);
+      border-radius: 99px;
+    }
+
+    .orn-mark {
+      font-size: 1.1rem;
+      line-height: 1;
+      display: inline-block;
+      transform: scale(1);
+      transition: transform 0.3s ease;
+    }
+
+    .ornament:hover .orn-mark {
+      transform: scale(1.25);
+    }
+
+    .ornament-light .orn-line {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 2px solid transparent;
+    }
+
+    .btn-pink {
+      background-color: var(--color-magenta-pink);
+      color: var(--color-surface);
+      box-shadow: 0 8px 24px rgba(255, 6, 124, 0.28);
+    }
+
+    .btn-pink:hover {
+      background-color: var(--color-pink-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(255, 6, 124, 0.38);
+    }
+
+    .btn-outline-white {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-outline-white:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      border-color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    /* Sticky Navigation */
+    .nav-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(251, 244, 251, 0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--color-border);
+      height: 76px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--color-magenta-pink);
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(255, 6, 124, 0.15);
+    }
+
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .nav-logo-title {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-text-mid);
+    }
+
+    .nav-logo-script {
+      font-family: var(--font-script);
+      font-size: 1.35rem;
+      color: var(--color-magenta-pink);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.88rem;
+      color: var(--color-text-mid);
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--color-magenta-pink);
+      transition: width 0.25s ease;
+      border-radius: 2px;
+    }
+
+    .nav-link:hover {
+      color: var(--color-magenta-pink);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 10px 20px;
+      font-size: 0.82rem;
+    }
+
+    /* CSS Mobile Navigation Toggle */
+    .nav-toggle-input {
+      display: none;
+    }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 20px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: var(--color-deep-plum);
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    /* Hide mobile menu by default on ALL screen sizes */
+    .nav-menu-mobile {
+      display: none;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('https://i.postimg.cc/ZnXxK8FD/475845944-122135193950569858-7999796986005861962-n.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding: 120px 0 80px 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(58, 20, 40, 0.40) 0%,
+        rgba(58, 20, 40, 0.70) 55%,
+        rgba(58, 20, 40, 0.95) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #FFFFFF;
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .hero-label {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #FFB0D5;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .hero-title-prefix {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .hero-title-main {
+      font-family: var(--font-script);
+      color: var(--color-magenta-pink);
+      font-size: clamp(3.2rem, 9vw, 6.5rem);
+      line-height: 1.05;
+      text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      margin-bottom: 16px;
+    }
+
+    .hero-description {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 580px;
+      margin: 0 auto 32px auto;
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .chip {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #FFFFFF;
+      padding: 8px 18px;
+      border-radius: 100px;
+      font-weight: 500;
+      font-size: 0.85rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    /* O MNIE (ABOUT) SECTION */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .about-text-content {
+      padding-right: 12px;
+    }
+
+    .about-description {
+      font-size: 1.05rem;
+      color: var(--color-text-mid);
+      margin-bottom: 28px;
+      line-height: 1.75;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--color-text-dark);
+      background: var(--color-blush-white);
+      padding: 12px 20px;
+      border-radius: 14px;
+      border: 1px solid var(--color-border);
+    }
+
+    .feature-icon {
+      font-size: 1.2rem;
+    }
+
+    /* Plum Contact Card */
+    .about-card {
+      background-color: var(--color-deep-plum);
+      color: #FFFFFF;
+      border-radius: 20px;
+      padding: 40px 32px;
+      border-top: 3px dashed var(--color-magenta-pink);
+      box-shadow: 0 16px 40px rgba(58, 20, 40, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-card::before {
+      content: '🩷';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      font-size: 100px;
+      opacity: 0.04;
+      pointer-events: none;
+    }
+
+    .about-card-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .about-card-subtitle {
+      color: #FFB0D5;
+      font-size: 0.88rem;
+      margin-bottom: 28px;
+    }
+
+    .contact-info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .contact-icon-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 6, 124, 0.2);
+      border: 1px solid rgba(255, 6, 124, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-details label {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-muted);
+      margin-bottom: 2px;
+    }
+
+    .contact-details a, .contact-details span {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #FFFFFF;
+    }
+
+    .contact-details a:hover {
+      color: var(--color-magenta-pink);
+    }
+
+    /* REALIZACJE (GALLERY) SECTION */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .gallery-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      box-shadow: 0 12px 36px rgba(255, 6, 124, 0.08);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      display: block;
+    }
+
+    .gallery-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      border-top: 3px dashed var(--color-magenta-pink);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 3;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 18px 44px rgba(255, 6, 124, 0.18);
+    }
+
+    .gallery-card:hover::before {
+      opacity: 1;
+    }
+
+    .gallery-img-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-card:hover .gallery-img {
+      transform: scale(1.08);
+    }
+
+    /* Zoom Overlay Badge on Hover */
+    .gallery-zoom-badge {
+      position: absolute;
+      inset: 0;
+      background: rgba(58, 20, 40, 0.45);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #FFFFFF;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 2;
+    }
+
+    .gallery-card:hover .gallery-zoom-badge {
+      opacity: 1;
+    }
+
+    .zoom-badge-icon {
+      font-size: 1.8rem;
+      background: var(--color-magenta-pink);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(255, 6, 124, 0.4);
+      transform: scale(0.8);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .gallery-card:hover .zoom-badge-icon {
+      transform: scale(1);
+    }
+
+    .zoom-badge-text {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+
+    /* CSS-only Gallery Expand Logic */
+    .gallery-toggle-input {
+      display: none;
+    }
+
+    .gallery-extra {
+      display: none;
+    }
+
+    #gallery-toggle:checked ~ .gallery-grid .gallery-extra {
+      display: block;
+      animation: fadeIn 0.4s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .gallery-actions {
+      text-align: center;
+    }
+
+    .btn-expand-label {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .btn-expand-less {
+      display: none;
+    }
+
+    #gallery-toggle:checked ~ .gallery-actions .btn-expand-more {
+      display: none;
+    }
+
+    #gallery-toggle:checked ~ .gallery-actions .btn-expand-less {
+      display: inline-flex;
+    }
+
+    /* CSS LIGHTBOX / ZOOM MODAL SYSTEM */
+    .zoom-toggle-input {
+      display: none;
+    }
+
+    .zoom-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(30, 10, 20, 0.90);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    /* When checked, show the modal */
+    .zoom-toggle-input:checked + .zoom-modal {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .zoom-backdrop {
+      position: absolute;
+      inset: 0;
+      cursor: pointer;
+    }
+
+    .zoom-modal-content {
+      position: relative;
+      z-index: 2;
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: scale(0.90);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .zoom-toggle-input:checked + .zoom-modal .zoom-modal-content {
+      transform: scale(1);
+    }
+
+    .zoom-modal-img {
+      max-width: 88vw;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 16px;
+      border: 3px solid var(--color-magenta-pink);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      background-color: var(--color-deep-plum);
+    }
+
+    .zoom-close-btn {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 44px;
+      height: 44px;
+      background-color: var(--color-magenta-pink);
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      z-index: 10;
+      user-select: none;
+    }
+
+    .zoom-close-btn:hover {
+      background-color: var(--color-pink-dark);
+      transform: scale(1.1);
+    }
+
+    .zoom-modal-caption {
+      margin-top: 16px;
+      color: #FFFFFF;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      background: rgba(58, 20, 40, 0.85);
+      padding: 10px 24px;
+      border-radius: 100px;
+      border: 1px solid rgba(255, 6, 124, 0.4);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* OPINIE (REVIEWS) SECTION */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 48px;
+    }
+
+    .review-card {
+      background-color: var(--color-surface);
+      border-radius: 20px;
+      padding: 36px 28px;
+      border: 1px solid var(--color-border);
+      border-top: 3px dashed var(--color-magenta-pink);
+      box-shadow: 0 12px 36px rgba(255, 6, 124, 0.10);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(255, 6, 124, 0.16);
+    }
+
+    .stars {
+      color: #FFC107;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .review-quote {
+      font-size: 0.96rem;
+      color: var(--color-text-mid);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--color-pink-pale);
+      color: var(--color-magenta-pink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .author-info {
+      line-height: 1.2;
+    }
+
+    .author-name {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--color-text-dark);
+    }
+
+    .author-source {
+      font-size: 0.78rem;
+      color: var(--color-muted);
+    }
+
+    .reviews-fb-link {
+      text-align: center;
+    }
+
+    .fb-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--color-magenta-pink);
+      letter-spacing: 0.05em;
+    }
+
+    .fb-link-btn:hover {
+      color: var(--color-pink-dark);
+      text-decoration: underline;
+    }
+
+    /* KONTAKT SECTION */
+    .contact-section-inner {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-intro {
+      font-size: 1.1rem;
+      color: var(--color-text-mid);
+      max-width: 540px;
+      margin: 0 auto 40px auto;
+    }
+
+    .contact-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .contact-box {
+      background-color: var(--color-surface);
+      border-radius: 20px;
+      padding: 28px 16px;
+      border: 1px solid var(--color-border);
+      box-shadow: 0 8px 24px rgba(255, 6, 124, 0.06);
+      transition: transform 0.3s ease;
+    }
+
+    .contact-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(255, 6, 124, 0.12);
+    }
+
+    .contact-box-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .contact-box-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-muted);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .contact-box-val {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--color-text-dark);
+    }
+
+    .contact-box-val a:hover {
+      color: var(--color-magenta-pink);
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: var(--color-deep-plum);
+      color: rgba(255, 255, 255, 0.8);
+      border-top: 3px solid var(--color-magenta-pink);
+      padding: 64px 0 32px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-logo-img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid var(--color-magenta-pink);
+    }
+
+    .footer-logo-script {
+      font-family: var(--font-script);
+      font-size: 1.8rem;
+      color: var(--color-magenta-pink);
+      line-height: 1;
+    }
+
+    .footer-text {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
+
+    .footer-heading {
+      font-family: var(--font-display);
+      color: #FFFFFF;
+      font-size: 1.15rem;
+      margin-bottom: 20px;
+    }
+
+    .footer-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-nav a {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.9rem;
+    }
+
+    .footer-nav a:hover {
+      color: var(--color-magenta-pink);
+    }
+
+    .footer-contact-info p {
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    .footer-contact-info a {
+      color: #FFFFFF;
+      font-weight: 500;
+    }
+
+    .footer-contact-info a:hover {
+      color: var(--color-magenta-pink);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 28px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 992px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .contact-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 64px 0;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-hamburger {
+        display: flex;
+      }
+
+      .nav-menu-mobile {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: rgba(251, 244, 251, 0.98);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: 0 16px 32px rgba(58, 20, 40, 0.12);
+        padding: 20px 24px;
+        flex-direction: column;
+        gap: 16px;
+        z-index: 1000;
+      }
+
+      #nav-toggle:checked ~ .nav-menu-mobile {
+        display: flex;
+      }
+
+      #nav-toggle:checked ~ .nav-hamburger span:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+      }
+
+      #nav-toggle:checked ~ .nav-hamburger span:nth-child(2) {
+        opacity: 0;
+      }
+
+      #nav-toggle:checked ~ .nav-hamburger span:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .hero {
+        padding: 100px 0 60px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY NAVIGATION HEADER -->
+  <header class="nav-header" id="main-header">
+    <div class="container">
+      <div class="nav-inner">
+        <!-- Logo -->
+        <a href="#" class="nav-brand" id="brand-logo-link">
+          <img 
+            src="https://i.postimg.cc/fyy8bT4m/468432815-122120117900569858-2171617149704646160-n.jpg" 
+            alt="Słodkości z Sercem Pieczone Logo" 
+            class="nav-logo-img"
+            id="nav-logo-img"
+          />
+          <div class="nav-logo-text" id="nav-logo-text">
+            <span class="nav-logo-title">SŁODKOŚCI</span>
+            <span class="nav-logo-script">z Sercem</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links" id="desktop-nav-links">
+          <li><a href="#o-mnie" class="nav-link" id="nav-link-o-mnie">O Mnie</a></li>
+          <li><a href="#realizacje" class="nav-link" id="nav-link-realizacje">Realizacje</a></li>
+          <li><a href="#opinie" class="nav-link" id="nav-link-opinie">Opinie</a></li>
+          <li><a href="#kontakt" class="nav-link" id="nav-link-kontakt">Kontakt</a></li>
+        </ul>
+
+        <!-- Right Header Action -->
+        <a href="#kontakt" class="btn btn-pink nav-cta" id="nav-cta-btn">Zapytaj o wycenę</a>
+
+        <!-- Mobile CSS Toggle & Hamburger Icon -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
+        <label for="nav-toggle" class="nav-hamburger" id="nav-hamburger-label" aria-label="Otwórz menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <!-- Mobile Menu Dropdown (Only displays when screen <= 768px AND #nav-toggle is checked) -->
+        <div class="nav-menu-mobile" id="mobile-nav-menu">
+          <a href="#o-mnie" class="nav-link" id="mobile-link-o-mnie" onclick="document.getElementById('nav-toggle').checked = false">O Mnie</a>
+          <a href="#realizacje" class="nav-link" id="mobile-link-realizacje" onclick="document.getElementById('nav-toggle').checked = false">Realizacje</a>
+          <a href="#opinie" class="nav-link" id="mobile-link-opinie" onclick="document.getElementById('nav-toggle').checked = false">Opinie</a>
+          <a href="#kontakt" class="nav-link" id="mobile-link-kontakt" onclick="document.getElementById('nav-toggle').checked = false">Kontakt</a>
+          <a href="#kontakt" class="btn btn-pink" id="mobile-link-cta" style="margin-top: 8px;" onclick="document.getElementById('nav-toggle').checked = false">Zapytaj o wycenę</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content" id="hero-content">
+        <span class="hero-label">Wierzbica · Kozłów · Miechów</span>
+
+        <span class="hero-title-prefix">SŁODKOŚCI</span>
+        <h1 class="hero-title-main">z Sercem Pieczone</h1>
+
+        <p class="hero-description">
+          Każde zamówienie traktuję indywidualnie, dbając o to, aby wszystkie słodkości były idealnie dopasowane do Twoich potrzeb i okazji.
+        </p>
+
+        <div class="hero-chips" id="hero-chips">
+          <span class="chip">🎂 Torty na zamówienie</span>
+          <span class="chip">🎉 Urodziny i wesela</span>
+          <span class="chip">💗 Tworzone z sercem</span>
+        </div>
+
+        <div class="hero-actions" id="hero-actions">
+          <a href="tel:516597983" class="btn btn-pink" id="hero-cta-phone">
+            📞 ZADZWOŃ: 516 597 983
+          </a>
+          <a href="#realizacje" class="btn btn-outline-white" id="hero-cta-gallery">
+            ZOBACZ REALIZACJE
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O MNIE (ABOUT) SECTION -->
+  <section class="section section-bg-white" id="o-mnie">
+    <div class="container">
+      <div class="about-grid" id="about-grid">
+        <!-- Left Column: Story & Features -->
+        <div class="about-text-content" id="about-text-content">
+          <span class="section-label">O MNIE</span>
+          <h2>Pasja, serce i smak w każdym wypieku</h2>
+          
+          <div class="ornament" style="justify-content: flex-start;" id="about-ornament">
+            <span class="orn-line"></span>
+            <span class="orn-mark">🩷</span>
+            <span class="orn-line"></span>
+          </div>
+
+          <p class="about-description">
+            Każde zamówienie traktuję indywidualnie, dbając o to, aby wszystkie słodkości były idealnie dopasowane do Twoich potrzeb i okazji. Niezależnie od tego, czy planujesz urodziny, wesele, czy po prostu chcesz umilić sobie dzień — mam coś dla każdego!
+          </p>
+
+          <ul class="feature-list" id="feature-list">
+            <li class="feature-item">
+              <span class="feature-icon">🎂</span>
+              <span>Torty na każdą okazję</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon">💍</span>
+              <span>Torty weselne i komunijne</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon">🎈</span>
+              <span>Torty urodzinowe</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon">💗</span>
+              <span>Indywidualne podejście do każdego zamówienia</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Deep Plum Contact Card -->
+        <div class="about-card" id="about-contact-card">
+          <h3 class="about-card-title">ZAMÓW SWÓJ TORT</h3>
+          <p class="about-card-subtitle">Porozmawiajmy o Twoim wymarzonym wypieku</p>
+          
+          <div class="contact-info-list" id="about-contact-list">
+            <div class="contact-info-item">
+              <div class="contact-icon-box">📞</div>
+              <div class="contact-details">
+                <label>Telefon</label>
+                <a href="tel:516597983" id="about-phone-link">516 597 983</a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon-box">✉️</div>
+              <div class="contact-details">
+                <label>E-mail</label>
+                <a href="mailto:monika88klim@wp.pl" id="about-email-link">monika88klim@wp.pl</a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon-box">📍</div>
+              <div class="contact-details">
+                <label>Obsługiwany rejon</label>
+                <span>Wierzbica · Kozłów · Miechów</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REALIZACJE (GALLERY) SECTION -->
+  <section class="section section-bg-pale" id="realizacje">
+    <div class="container">
+      <div class="section-header" id="gallery-section-header">
+        <span class="section-label">NASZE REALIZACJE</span>
+        <h2>Każdy tort to osobna historia</h2>
+      </div>
+
+      <!-- CSS-only Expandable Gallery Container Toggle -->
+      <input type="checkbox" id="gallery-toggle" class="gallery-toggle-input" />
+
+      <!-- PURE CSS LIGHTBOX MODALS FOR ALL 9 IMAGES -->
+      <!-- Modal 1 -->
+      <input type="checkbox" id="zoom-1" class="zoom-toggle-input" />
+      <div class="zoom-modal" id="modal-zoom-1">
+        <label for="zoom-1" class="zoom-backdrop" aria-label="Zamknij podgląd"></label>
+        <div class="zoom-modal-content">
+          <label for="zoom-1" class="zoom-close-btn" title="Zamknij">✕</label>
+          <img src="https://i.postimg.cc/3xTbXhmj/468817300-122120118026569858-8686737517178385759-n.jpg" alt="Tort okolicznościowy Słodkości z Sercem" class="zoom-modal-img" />
+          <div class="zoom-modal-caption">
+            <span>🎂 Słodkości z Sercem Pieczone</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 2 -->
+      <input type="checkbox" id="zoom-2" class="zoom-toggle-input" />
+      <div class="zoom-modal" id="modal-zoom-2">
+        <label for="zoom-2" class="zoom-backdrop" aria-label="Zamknij podgląd"></label>
+        <div class="zoom-modal-content">
+          <label for="zoom-2" class="zoom-close-btn" title="Zamknij">✕</label>
+          <img src="https://i.postimg.cc/Bn0wT3HT/468945657-122120118080569858-4506822108782433045-n.jpg" alt="Artystyczny tort urodzinowy" class="zoom-modal-img" />
+          <div class="zoom-modal-caption">
+            <span>🎂 Słodkości z Sercem Pieczone</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 3 -->
+      <input type="checkbox" id="zoom-3" class="zoom-toggle-input" />
+      <div class="zoom-modal" id="modal-zoom-3">
+        <label for="zoom-3" class="zoom-backdrop" aria-label="Zamknij podgląd"></label>
+        <div class="zoom-modal-content">
+          <label for="zoom-3" class="zoom-close-btn" title="Zamknij">✕</label>
+          <img src="https://i.postimg.cc/4NtSHy78/473062369-122131235168569858-3010777977413695276-n.jpg" alt="Elegancki wypiek patisserie" class="zoom-modal-img" />
+          <div class="zoom-modal-caption">
+            <span>🎂 Słodkości z Sercem Pieczone</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 4 -->
+      <input type="checkbox" id="zoom-4" class="zoom-toggle-input" />
+      <div class="zoom-modal" id="modal-zoom-4">
+        <label for="zoom-4" class="zoom-backdrop" aria-label="Zamknij podgląd"></label>
+        <div class="zoom-modal-content">
+          <label for="zoom-4" class="zoom-close-btn" title="Zamknij">✕</label>
+          <img src="https://i.postimg.cc/0ysHYvDZ/473063065-122131235438569858-2995326514742616235-n.jpg" alt="Tort dekorowany z sercem" class="zoom-modal-img" />
+          <div class="zoom-modal-caption">
+            <span>🎂 Słodkości z Sercem Pieczone</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 5 -->
+      <input type="checkbox" id="zoom-5" class="zoom-toggle-input" />
+      <div class="zoom-modal" id="modal-zoom-5">
+        <label for="zoom-5" class="zoom-backdrop" aria-label="Zamknij podgląd"></label>
+        <div class="zoom-modal-content">
+          <label for="zoom-5" class="zoom-close-btn" title="Zamknij">✕</label>
+          <img src="https://i.postimg.cc/kgmhQCKF/473797673-122131235552569858-5779089855589923812-n.jpg" alt="Tort komunijny lub weselny" class="zoom-modal-img" />
+          <div class="zoom-modal-caption">
+            <span>🎂 Słodkości z Sercem Pieczone</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 6 -->
+      <input type="checkbox" id="zoom-6" class="zoom-toggle-input" />
+      <div class="zoom-modal" id="modal-zoom-6">
+        <label for="zoom-6" class="zoom-backdrop" aria-label="Zamknij podgląd"></label>
+        <div class="zoom-modal-content">
+          <label for="zoom-6" class="zoom-close-btn" title="Zamknij">✕</label>
+          <img src="https://i.postimg.cc/qvTZsry1/473854389-122131235654569858-5221327150141641887-n.jpg" alt="Pyszny domowy tort na zamówienie" class="zoom-modal-img" />
+          <div class="zoom-modal-caption">
+            <span>🎂 Słodkości z Sercem Pieczone</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 7 -->
+      <input type="checkbox" id="zoom-7" class="zoom-toggle-input" />
+      <div class="zoom-modal" id="modal-zoom-7">
+        <label for="zoom-7" class="zoom-backdrop" aria-label="Zamknij podgląd"></label>
+        <div class="zoom-modal-content">
+          <label for="zoom-7" class="zoom-close-btn" title="Zamknij">✕</label>
+          <img src="https://i.postimg.cc/13QYGSwp/474071378-122131235732569858-4061801844243888329-n.jpg" alt="Niestandardowy projekt tortu" class="zoom-modal-img" />
+          <div class="zoom-modal-caption">
+            <span>🎂 Słodkości z Sercem Pieczone</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 8 -->
+      <input type="checkbox" id="zoom-8" class="zoom-toggle-input" />
+      <div class="zoom-modal" id="modal-zoom-8">
+        <label for="zoom-8" class="zoom-backdrop" aria-label="Zamknij podgląd"></label>
+        <div class="zoom-modal-content">
+          <label for="zoom-8" class="zoom-close-btn" title="Zamknij">✕</label>
+          <img src="https://i.postimg.cc/2SDXQYhX/474130080-122131235804569858-4674696001222449764-n.jpg" alt="Słodkie wypieki okolicznościowe" class="zoom-modal-img" />
+          <div class="zoom-modal-caption">
+            <span>🎂 Słodkości z Sercem Pieczone</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 9 -->
+      <input type="checkbox" id="zoom-9" class="zoom-toggle-input" />
+      <div class="zoom-modal" id="modal-zoom-9">
+        <label for="zoom-9" class="zoom-backdrop" aria-label="Zamknij podgląd"></label>
+        <div class="zoom-modal-content">
+          <label for="zoom-9" class="zoom-close-btn" title="Zamknij">✕</label>
+          <img src="https://i.postimg.cc/DwTYrhL9/475471960-122135193980569858-3081534017836015568-n.jpg" alt="Tort artystyczny pieczony z pasją" class="zoom-modal-img" />
+          <div class="zoom-modal-caption">
+            <span>🎂 Słodkości z Sercem Pieczone</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALLERY CARDS GRID -->
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Visible Image 1 -->
+        <label for="zoom-1" class="gallery-card" id="gallery-item-1" title="Kliknij, aby powiększyć">
+          <div class="gallery-img-wrapper">
+            <img 
+              src="https://i.postimg.cc/3xTbXhmj/468817300-122120118026569858-8686737517178385759-n.jpg" 
+              alt="Tort okolicznościowy Słodkości z Sercem" 
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="gallery-zoom-badge">
+              <span class="zoom-badge-icon">🔍</span>
+              <span class="zoom-badge-text">Powiększ</span>
+            </div>
+          </div>
+        </label>
+
+        <!-- Visible Image 2 -->
+        <label for="zoom-2" class="gallery-card" id="gallery-item-2" title="Kliknij, aby powiększyć">
+          <div class="gallery-img-wrapper">
+            <img 
+              src="https://i.postimg.cc/Bn0wT3HT/468945657-122120118080569858-4506822108782433045-n.jpg" 
+              alt="Artystyczny tort urodzinowy" 
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="gallery-zoom-badge">
+              <span class="zoom-badge-icon">🔍</span>
+              <span class="zoom-badge-text">Powiększ</span>
+            </div>
+          </div>
+        </label>
+
+        <!-- Visible Image 3 -->
+        <label for="zoom-3" class="gallery-card" id="gallery-item-3" title="Kliknij, aby powiększyć">
+          <div class="gallery-img-wrapper">
+            <img 
+              src="https://i.postimg.cc/4NtSHy78/473062369-122131235168569858-3010777977413695276-n.jpg" 
+              alt="Elegancki wypiek patisserie" 
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="gallery-zoom-badge">
+              <span class="zoom-badge-icon">🔍</span>
+              <span class="zoom-badge-text">Powiększ</span>
+            </div>
+          </div>
+        </label>
+
+        <!-- Visible Image 4 -->
+        <label for="zoom-4" class="gallery-card" id="gallery-item-4" title="Kliknij, aby powiększyć">
+          <div class="gallery-img-wrapper">
+            <img 
+              src="https://i.postimg.cc/0ysHYvDZ/473063065-122131235438569858-2995326514742616235-n.jpg" 
+              alt="Tort dekorowany z sercem" 
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="gallery-zoom-badge">
+              <span class="zoom-badge-icon">🔍</span>
+              <span class="zoom-badge-text">Powiększ</span>
+            </div>
+          </div>
+        </label>
+
+        <!-- Visible Image 5 -->
+        <label for="zoom-5" class="gallery-card" id="gallery-item-5" title="Kliknij, aby powiększyć">
+          <div class="gallery-img-wrapper">
+            <img 
+              src="https://i.postimg.cc/kgmhQCKF/473797673-122131235552569858-5779089855589923812-n.jpg" 
+              alt="Tort komunijny lub weselny" 
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="gallery-zoom-badge">
+              <span class="zoom-badge-icon">🔍</span>
+              <span class="zoom-badge-text">Powiększ</span>
+            </div>
+          </div>
+        </label>
+
+        <!-- Visible Image 6 -->
+        <label for="zoom-6" class="gallery-card" id="gallery-item-6" title="Kliknij, aby powiększyć">
+          <div class="gallery-img-wrapper">
+            <img 
+              src="https://i.postimg.cc/qvTZsry1/473854389-122131235654569858-5221327150141641887-n.jpg" 
+              alt="Pyszny domowy tort na zamówienie" 
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="gallery-zoom-badge">
+              <span class="zoom-badge-icon">🔍</span>
+              <span class="zoom-badge-text">Powiększ</span>
+            </div>
+          </div>
+        </label>
+
+        <!-- Hidden Image 7 (Expandable) -->
+        <label for="zoom-7" class="gallery-card gallery-extra" id="gallery-item-7" title="Kliknij, aby powiększyć">
+          <div class="gallery-img-wrapper">
+            <img 
+              src="https://i.postimg.cc/13QYGSwp/474071378-122131235732569858-4061801844243888329-n.jpg" 
+              alt="Niestandardowy projekt tortu" 
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="gallery-zoom-badge">
+              <span class="zoom-badge-icon">🔍</span>
+              <span class="zoom-badge-text">Powiększ</span>
+            </div>
+          </div>
+        </label>
+
+        <!-- Hidden Image 8 (Expandable) -->
+        <label for="zoom-8" class="gallery-card gallery-extra" id="gallery-item-8" title="Kliknij, aby powiększyć">
+          <div class="gallery-img-wrapper">
+            <img 
+              src="https://i.postimg.cc/2SDXQYhX/474130080-122131235804569858-4674696001222449764-n.jpg" 
+              alt="Słodkie wypieki okolicznościowe" 
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="gallery-zoom-badge">
+              <span class="zoom-badge-icon">🔍</span>
+              <span class="zoom-badge-text">Powiększ</span>
+            </div>
+          </div>
+        </label>
+
+        <!-- Hidden Image 9 (Expandable) -->
+        <label for="zoom-9" class="gallery-card gallery-extra" id="gallery-item-9" title="Kliknij, aby powiększyć">
+          <div class="gallery-img-wrapper">
+            <img 
+              src="https://i.postimg.cc/DwTYrhL9/475471960-122135193980569858-3081534017836015568-n.jpg" 
+              alt="Tort artystyczny pieczony z pasją" 
+              class="gallery-img"
+              loading="lazy"
+            />
+            <div class="gallery-zoom-badge">
+              <span class="zoom-badge-icon">🔍</span>
+              <span class="zoom-badge-text">Powiększ</span>
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <!-- Expand Button -->
+      <div class="gallery-actions" id="gallery-actions">
+        <label for="gallery-toggle" class="btn btn-pink btn-expand-label" id="gallery-toggle-label">
+          <span class="btn-expand-more">ZOBACZ WIĘCEJ REALIZACJI (+3)</span>
+          <span class="btn-expand-less">ZWIŃ REALIZACJE</span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPINIE (REVIEWS) SECTION -->
+  <section class="section section-bg-white" id="opinie">
+    <div class="container">
+      <div class="section-header" id="reviews-section-header">
+        <span class="section-label">OPINIE</span>
+        <h2>Co mówią klienci</h2>
+        <div class="ornament" id="reviews-ornament">
+          <span class="orn-line"></span>
+          <span class="orn-mark">🩷</span>
+          <span class="orn-line"></span>
+        </div>
+      </div>
+
+      <div class="reviews-grid" id="reviews-grid">
+        <!-- Review Card 1 -->
+        <div class="review-card" id="review-card-1">
+          <div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-quote">
+              "Polecam 👏💪💪👏 Jak sama nazwa mówi — Słodkości z sercem pieczone... bo tak w rzeczywistości jest. Pyszny, piękny tort komunijny 🥰😘"
+            </p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">K</div>
+            <div class="author-info">
+              <div class="author-name">Klientka Facebook</div>
+              <div class="author-source">Opinia z Facebooka</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 2 -->
+        <div class="review-card" id="review-card-2">
+          <div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-quote">
+              "Torty pyszne, domowej roboty, pięknie wykonane. Serdecznie polecam! 😊"
+            </p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <div class="author-name">Zadowolony Klient</div>
+              <div class="author-source">Opinia z Facebooka</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 3 -->
+        <div class="review-card" id="review-card-3">
+          <div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-quote">
+              "Serdecznie polecam — torty i ciasta są bardzo pyszne i starannie wykonane. Wszystkie słodkości są wykonywane pod indywidualne preferencje i z wysokiej jakości składników. Polecam w 100%!"
+            </p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <div class="author-name">Stała Klientka</div>
+              <div class="author-source">Opinia z Facebooka</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-fb-link" id="reviews-fb-container">
+        <a 
+          href="https://www.facebook.com/profile.php?id=61567095763241&sk=reviews" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="fb-link-btn"
+          id="fb-reviews-external-link"
+        >
+          <span>WIĘCEJ OPINII NA FACEBOOKU</span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT SECTION -->
+  <section class="section section-bg-pale" id="kontakt">
+    <div class="container">
+      <div class="contact-section-inner" id="contact-inner">
+        <span class="section-label">KONTAKT</span>
+        <h2>Zamów swój wymarzony tort.</h2>
+
+        <p class="contact-intro">
+          Napisz, zadzwoń lub zajrzyj na Facebooka — porozmawiajmy o Twojej wyjątkowej okazji.
+        </p>
+
+        <div class="contact-cards-grid" id="contact-cards-grid">
+          <!-- Phone Box -->
+          <div class="contact-box" id="contact-box-phone">
+            <span class="contact-box-icon">📞</span>
+            <div class="contact-box-title">Telefon</div>
+            <div class="contact-box-val">
+              <a href="tel:516597983" id="contact-phone-direct">516 597 983</a>
+            </div>
+          </div>
+
+          <!-- Email Box -->
+          <div class="contact-box" id="contact-box-email">
+            <span class="contact-box-icon">✉️</span>
+            <div class="contact-box-title">E-mail</div>
+            <div class="contact-box-val">
+              <a href="mailto:monika88klim@wp.pl" id="contact-email-direct">monika88klim@wp.pl</a>
+            </div>
+          </div>
+
+          <!-- Region Box -->
+          <div class="contact-box" id="contact-box-region">
+            <span class="contact-box-icon">📍</span>
+            <div class="contact-box-title">Lokalizacja</div>
+            <div class="contact-box-val">Wierzbica / Kozłów / Miechów</div>
+          </div>
+
+          <!-- Facebook Box -->
+          <div class="contact-box" id="contact-box-fb">
+            <span class="contact-box-icon">🌐</span>
+            <div class="contact-box-title">Facebook</div>
+            <div class="contact-box-val">
+              <a 
+                href="https://www.facebook.com/profile.php?id=61567095763241" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                id="contact-fb-direct"
+              >
+                Profil FB
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <a href="tel:516597983" class="btn btn-pink" id="contact-main-cta">
+            ZADZWOŃ: 516 597 983
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid" id="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand" id="footer-brand">
+          <div class="footer-logo">
+            <img 
+              src="https://i.postimg.cc/fyy8bT4m/468432815-122120117900569858-2171617149704646160-n.jpg" 
+              alt="Logo Słodkości z Sercem Pieczone" 
+              class="footer-logo-img"
+            />
+            <span class="footer-logo-script">Słodkości z Sercem</span>
+          </div>
+          <p class="footer-text">
+            Torty i słodkości na zamówienie, indywidualnie dopasowane do Twojej okazji. Pieczone z pasją i sercem.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div id="footer-nav-col">
+          <h4 class="footer-heading">Nawigacja</h4>
+          <ul class="footer-nav">
+            <li><a href="#hero-section">Strona Główna</a></li>
+            <li><a href="#o-mnie">O Mnie</a></li>
+            <li><a href="#realizacje">Realizacje</a></li>
+            <li><a href="#opinie">Opinie</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact-info" id="footer-contact-col">
+          <h4 class="footer-heading">Kontakt</h4>
+          <p>📞 Tel: <a href="tel:516597983">516 597 983</a></p>
+          <p>✉️ E-mail: <a href="mailto:monika88klim@wp.pl">monika88klim@wp.pl</a></p>
+          <p>📍 Rejon: Wierzbica · Kozłów · Miechów</p>
+          <p>👍 FB: <a href="https://www.facebook.com/profile.php?id=61567095763241" target="_blank" rel="noopener noreferrer">Słodkości z Sercem Pieczone</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom" id="footer-bottom">
+        <p>© 2026 Słodkości z Sercem Pieczone. Wszelkie prawa zastrzeżone.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
