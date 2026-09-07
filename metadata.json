@@ -1,6 +1,6 @@
 {
   "name": "Słodkości z Sercem Pieczone",
-  "description": "Torty i słodkości na zamówienie, indywidualnie dopasowane do Twojej okazji. Wierzbica, Kozłów, Miechów.",
+  "description": "Torty i słodkości na zamówienie, indywidualnie dopasowane do Twojej okazji. Wierzbica, Kozłów, Miechów, Książ Wielki, Sędziszów.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
