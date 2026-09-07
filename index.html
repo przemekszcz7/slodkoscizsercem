@@ -46,6 +46,7 @@
 
     html {
       scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
       font-size: 16px;
     }
 
@@ -337,8 +338,14 @@
       background-image: url('https://i.ibb.co/dw9SRjCs/672481138-987858017243888-4451240852242328396-n.jpg');
       background-size: cover;
       background-position: center;
-      background-attachment: fixed;
+      background-attachment: scroll; /* Smooth scrolling on mobile & touch */
       padding: 120px 0 80px 0;
+    }
+
+    @media (min-width: 1025px) {
+      .hero {
+        background-attachment: fixed;
+      }
     }
 
     .btn-whatsapp {
@@ -574,21 +581,26 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
-      margin-bottom: 40px;
+      margin-bottom: 24px;
     }
 
     .gallery-card {
       content-visibility: auto;
-      contain-intrinsic-size: 300px 300px;
+      contain-intrinsic-size: 240px 240px;
       position: relative;
       border-radius: 16px;
       overflow: hidden;
       background-color: var(--color-surface);
       border: 1px solid var(--color-border);
-      box-shadow: 0 12px 36px rgba(255, 6, 124, 0.08);
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 8px 24px rgba(255, 6, 124, 0.07);
       cursor: pointer;
       display: block;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    .gallery-card.card-hidden-page {
+      display: none !important;
     }
 
     .gallery-card::before {
@@ -600,17 +612,8 @@
       height: 3px;
       border-top: 3px dashed var(--color-magenta-pink);
       opacity: 0;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.25s ease;
       z-index: 3;
-    }
-
-    .gallery-card:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 18px 44px rgba(255, 6, 124, 0.18);
-    }
-
-    .gallery-card:hover::before {
-      opacity: 1;
     }
 
     .gallery-img-wrapper {
@@ -618,17 +621,82 @@
       width: 100%;
       aspect-ratio: 1 / 1;
       overflow: hidden;
+      background: #FFF0F6;
     }
 
     .gallery-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
 
-    .gallery-card:hover .gallery-img {
-      transform: scale(1.08);
+    /* Desktop-only smooth hover effects */
+    @media (hover: hover) and (pointer: fine) {
+      .gallery-card {
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+      }
+      .gallery-img {
+        transition: transform 0.4s ease;
+      }
+      .gallery-card:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 18px 44px rgba(255, 6, 124, 0.18);
+      }
+      .gallery-card:hover::before {
+        opacity: 1;
+      }
+      .gallery-card:hover .gallery-img {
+        transform: scale(1.06);
+      }
+      .gallery-card:hover .gallery-zoom-badge {
+        opacity: 1;
+      }
+      .gallery-card:hover .zoom-badge-icon {
+        transform: scale(1);
+      }
+    }
+
+    /* Touch device active feedback */
+    @media (hover: none) {
+      .gallery-card:active {
+        transform: scale(0.97);
+        transition: transform 0.1s ease;
+      }
+      .gallery-zoom-badge {
+        display: none !important;
+      }
+    }
+
+    /* Load More Gallery Button */
+    .gallery-load-more-wrap {
+      text-align: center;
+      margin: 8px auto 36px auto;
+    }
+    .btn-load-more {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 32px;
+      background: #FFFFFF;
+      color: var(--color-magenta-pink);
+      border: 2px solid var(--color-magenta-pink);
+      border-radius: 100px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(255, 6, 124, 0.12);
+      transition: all 0.25s ease;
+      touch-action: manipulation;
+    }
+    .btn-load-more:hover, .btn-load-more:active {
+      background: var(--color-magenta-pink);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 6, 124, 0.28);
     }
 
     /* Zoom Overlay Badge on Hover */
@@ -1341,7 +1409,7 @@
       color: rgba(255, 255, 255, 0.5);
     }
 
-    /* RESPONSIVE DESIGN */
+    /* RESPONSIVE DESIGN & MOBILE PERFORMANCE */
     @media (max-width: 992px) {
       .about-grid {
         grid-template-columns: 1fr;
@@ -1350,6 +1418,7 @@
 
       .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
       }
 
       .reviews-grid {
@@ -1359,10 +1428,6 @@
         margin-right: auto;
       }
 
-      .contact-cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
       .footer-grid {
         grid-template-columns: 1fr 1fr;
       }
@@ -1370,7 +1435,14 @@
 
     @media (max-width: 768px) {
       .section {
-        padding: 64px 0;
+        padding: 56px 0;
+      }
+
+      /* Disable heavy backdrop-filter blur while scrolling on mobile */
+      .nav-header {
+        background: rgba(251, 244, 251, 0.98);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
       }
 
       .nav-links {
@@ -1391,11 +1463,11 @@
         left: 0;
         right: 0;
         width: 100%;
-        background: rgba(251, 244, 251, 0.98);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
+        background: #FFFFFF;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
         border-bottom: 1px solid var(--color-border);
-        box-shadow: 0 16px 32px rgba(58, 20, 40, 0.12);
+        box-shadow: 0 12px 28px rgba(58, 20, 40, 0.12);
         padding: 20px 24px;
         flex-direction: column;
         gap: 16px;
@@ -1418,12 +1490,33 @@
         transform: translateY(-8.5px) rotate(-45deg);
       }
 
+      /* Keep neat 2-column mobile layout like Instagram rather than 1 giant column */
       .gallery-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
       }
 
-      .contact-cards-grid {
-        grid-template-columns: 1fr;
+      .gallery-card {
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(58, 20, 40, 0.05);
+      }
+
+      .gal-categories {
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+
+      .gal-category-btn {
+        padding: 8px 16px;
+        font-size: 0.84rem;
+      }
+
+      .contact-hero-card,
+      .contact-sub-card,
+      .contact-location-banner,
+      .sweet-table-banner,
+      .review-card {
+        box-shadow: 0 4px 14px rgba(58, 20, 40, 0.05);
       }
 
       .footer-grid {
@@ -1432,7 +1525,22 @@
       }
 
       .hero {
-        padding: 100px 0 60px 0;
+        padding: 90px 0 50px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+      .gallery-card {
+        border-radius: 10px;
+      }
+      .btn-load-more {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -2819,6 +2927,13 @@
         </div>
       </div>
 
+      <!-- LOAD MORE BUTTON FOR MOBILE PERFORMANCE -->
+      <div class="gallery-load-more-wrap" id="gallery-load-more-wrap">
+        <button type="button" class="btn-load-more" id="btn-load-more">
+          <span>📸 Zobacz wszystkie zdjęcia (47)</span>
+        </button>
+      </div>
+
       <!-- SŁODKI STÓŁ FEATURE BANNER -->
       <div class="sweet-table-banner" id="sweet-table-banner">
         <div class="sweet-table-icon">🧁</div>
@@ -3101,6 +3216,57 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeLightbox();
     });
+
+    // Auto-close mobile menu on link click
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileLinks = document.querySelectorAll('.nav-menu-mobile a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navToggle) navToggle.checked = false;
+      });
+    });
+
+    // Progressive Gallery Loading for ultra-smooth mobile scrolling
+    (function() {
+      const cards = document.querySelectorAll('.gallery-card');
+      const loadMoreWrap = document.getElementById('gallery-load-more-wrap');
+      const loadMoreBtn = document.getElementById('btn-load-more');
+      const filterRadios = document.querySelectorAll('.gal-filter-radio');
+      const filterAll = document.getElementById('filter-all');
+      
+      let isAllExpanded = false;
+      const INITIAL_VISIBLE_COUNT = 12;
+
+      function updateGalleryCards() {
+        const isAllActive = filterAll && filterAll.checked;
+
+        if (isAllActive && !isAllExpanded) {
+          cards.forEach((card, idx) => {
+            if (idx >= INITIAL_VISIBLE_COUNT) {
+              card.classList.add('card-hidden-page');
+            } else {
+              card.classList.remove('card-hidden-page');
+            }
+          });
+          if (loadMoreWrap) loadMoreWrap.style.display = 'block';
+        } else {
+          // If a specific category tab is active or user expanded All
+          cards.forEach(card => card.classList.remove('card-hidden-page'));
+          if (loadMoreWrap) loadMoreWrap.style.display = 'none';
+        }
+      }
+
+      loadMoreBtn?.addEventListener('click', function() {
+        isAllExpanded = true;
+        updateGalleryCards();
+      });
+
+      filterRadios.forEach(radio => {
+        radio.addEventListener('change', updateGalleryCards);
+      });
+
+      updateGalleryCards();
+    })();
   </script>
 </body>
 </html>
